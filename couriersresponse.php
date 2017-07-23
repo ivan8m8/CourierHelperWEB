@@ -5,17 +5,20 @@
 
 	mb_internal_encoding("UTF-8");
 
-	$mysql_host = "localhost";
-	$mysql_user = "host1585490";
-	$mysql_password = "a5523393";
-	$mysql_dbname = "host1585490";
-	$mysql_tablename = "allDeliveriesFromOnlineStoreEngine";
+	$mysql_host = ""; // адрес MySQL-сервера
+	$mysql_user = ""; // имя пользователя для аторизации на Вашем MySQL-сервере
+	$mysql_password = ""; // пароль для пользовтеля, указанного выше
+	$mysql_dbname = ""; // название Вашей MySQL-базы данных, в которой хранится таблица с информацией о доставках
+	$mysql_tablename = ""; // название MySQL-таблицы, в кторой харнится информация о доставках
 
 	$orderNumber = $_GET["orderNumber"];
     $deliveryDate = $_GET["deliveryDate"];
     $secureCode = $_GET["secure7Code"];
 
-    if ($secureCode == "придумайтеКод") {
+    /**
+	* Здесь переменная secureCode должна совпадать с той, которая указана в файле имя для Android-приложения.
+	**/
+	if ($secureCode == "придумайтеКод") {
     	$link = mysql_connect($mysql_host, $mysql_user, $mysql_password) 
         or die('Не удалось соединиться: ' . mysql_error());
     	mysql_select_db($mysql_dbname) or die('Не удалось выбрать базу данных: ' . mysql_error());
