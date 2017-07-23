@@ -15,7 +15,7 @@
     $deliveryDate = $_GET["deliveryDate"];
     $secureCode = $_GET["secure7Code"];
 
-    if ($secureCode == "87i") {
+    if ($secureCode == "придумайтеКод") {
     	$link = mysql_connect($mysql_host, $mysql_user, $mysql_password) 
         or die('Не удалось соединиться: ' . mysql_error());
     	mysql_select_db($mysql_dbname) or die('Не удалось выбрать базу данных: ' . mysql_error());
