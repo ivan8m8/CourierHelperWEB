@@ -351,18 +351,18 @@ if (isset($_POST["removeAllTheDeliveries"])) {
 if (isset($_POST["addRandomDeliveries"])) {
     $rndddump = "INSERT INTO `deliveries` (`orderNumber`, `clientName`, `deliveryAddress`, `latLng`, `deliveryUndergroundStation1`, `deliveryUndergroundStation2`, `deliveryUndergroundStation1Distance`, `deliveryUndergroundStation2Distance`, `adminArea`, `district`, `clientPhoneNumber`, `clientComment`, `deliveryTimeLimit`, `itemName`, `itemPrice`, `deliveryDate`, `deliveryStatus`, `deliveryCourier`) VALUES
 (1, NULL, 'Тверская, 11', '', '', '', '', '', '', '', NULL, NULL, 'до 23', NULL, NULL, NULL, 0, NULL),
-(2, 'Иван', 'Старая Басманная, 1', '', '', '', '', '', '', '', '89001234568', '', 'до 18', 'GA-120B-7A', '5890', '', 0, 'АстаховПП'),
-(3, 'Дмитрий', 'Кунцевская, 8', '', '', '', '', '', '', '', '89008947649', 'сразу позвонить', 'до 22', 'GA-400B-7C', '9890', '', 0, 'АстаховПП'),
-(4, 'Константин', 'Вяземская, 8', '37.400674,55.713785', 'Молодёжная', 'Кунцевская', '3.20', '3.37', 'ЗАО', 'Можайский', '89001459837', 'вручить подарок', 'до 18', 'QEMC-MJ2', '1890', '', 0, 'АстаховПП'),
-(5, 'Александр', 'Брянская, 2', '37.563853,55.744389', 'Киевская', 'Киевская', '0.14', '0.16', 'ЗАО', 'Дорогомилово', '89008741373', '', '', 'EFR-1200-2B', '11890', '', 0, 'АстаховПП'),
-(6, 'Олег', 'Одинцовская, 9', '37.400045,55.786025', 'Строгино', 'Крылатское', '1.97', '3.28', 'СЗАО', 'Строгино', '89009801039', '', '', 'Восток 112897', '2490', '', 0, 'СадиковЕЕ'),
-(7, NULL, 'Тверская, 8', '', '', '', '', '', '', '', NULL, NULL, 'до 17', NULL, NULL, NULL, 0, NULL),
-(8, NULL, 'Тверская, 18', '37.604241,55.766147', 'Пушкинская', 'Тверская', '0.04', '0.21', 'ЦАО', 'Тверской', NULL, NULL, 'после 17', NULL, NULL, NULL, 0, NULL),
+(2, 'Иван', 'Старая Басманная, 1', '', '', '', '', '', '', '', '89001234568', '', 'до 18', 'GA-120B-7A', '5890', '', 0, 'АстаховПП_kV00'),
+(3, 'Дмитрий', 'Кунцевская, 8', '', '', '', '', '', '', '', '89008947649', 'сразу позвонить', 'до 22', 'GA-400B-7C', '9890', '', 0, 'АстаховПП_kV00'),
+(4, 'Константин', 'Вяземская, 8', '37.400674,55.713785', 'Молодёжная', 'Кунцевская', '3.20', '3.37', 'ЗАО', 'Можайский', '89001459837', 'вручить подарок', 'до 18', 'QEMC-MJ2', '1890', '', 0, 'АстаховПП_kV00'),
+(5, 'Александр', 'Брянская, 2', '37.563853,55.744389', 'Киевская', 'Киевская', '0.14', '0.16', 'ЗАО', 'Дорогомилово', '89008741373', '', '', 'EFR-1200-2B', '11890', '', 0, 'АстаховПП_kV00'),
+(6, 'Олег', 'Одинцовская, 9', '37.400045,55.786025', 'Строгино', 'Крылатское', '1.97', '3.28', 'СЗАО', 'Строгино', '89009801039', '', '', 'Восток 112897', '2490', '', 0, 'СадиковЕЕ_zeU7'),
+(7, NULL, 'Тверская, 8', '', '', '', '', '', '', '', NULL, NULL, 'до 17', NULL, NULL, NULL, 0, 'ИвановОИ_mT3v'),
+(8, NULL, 'Тверская, 18', '37.604241,55.766147', 'Пушкинская', 'Тверская', '0.04', '0.21', 'ЦАО', 'Тверской', NULL, NULL, 'после 17', NULL, NULL, NULL, 0, 'ИвановОИ_mT3v'),
 (9, NULL, 'Новая Басманная, 8', '37.654996,55.769205', 'Красные Ворота', 'Комсомольская', '0.38', '0.52', 'ЦАО', 'Басманный', NULL, NULL, 'до 15', NULL, NULL, NULL, 0, NULL),
-(10, NULL, 'Тверская, 19', '37.603586,55.765154', 'Пушкинская', 'Тверская', '0.06', '0.16', 'ЦАО', 'Тверской', NULL, NULL, '', NULL, NULL, NULL, 0, NULL),
+(10, NULL, 'Тверская, 19', '37.603586,55.765154', 'Пушкинская', 'Тверская', '0.06', '0.16', 'ЦАО', 'Тверской', NULL, NULL, '', NULL, NULL, NULL, 0, 'ИвановОИ_mT3v'),
 (11, NULL, 'Митинская, 17', '', '', '', '', '', '', '', NULL, NULL, '', NULL, NULL, NULL, 0, NULL),
-(12, NULL, 'Тверская, 22', '37.601169,55.767418', 'Пушкинская', 'Маяковская', '0.25', '0.40', 'ЦАО', 'Тверской', NULL, NULL, 'после 20', NULL, NULL, NULL, 0, NULL),
-(13, 'Сергей', 'Балчуг, 7', '', '', '', '', '', '', '', '', '', 'после 16', '', NULL, NULL, 0, NULL),
+(12, NULL, 'Тверская, 22', '37.601169,55.767418', 'Пушкинская', 'Маяковская', '0.25', '0.40', 'ЦАО', 'Тверской', NULL, NULL, 'после 20', NULL, NULL, NULL, 0, 'ИвановОИ_mT3v'),
+(13, 'Сергей', 'Балчуг, 7', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, 0, NULL),
 (14, '', 'Варшавское шоссе, 42', '37.624741,55.675306', 'Нагатинская', 'Нагорная', '0.90', '0.91', 'ЮАО', 'Нагорный', '89001001010', '', 'до 15', '', NULL, NULL, 0, NULL),
 (15, 'Антон', 'Варшавское шоссе, 68', '', '', '', '', '', '', '', '89001001010', '', 'до 15', '', NULL, NULL, 0, NULL),
 (16, '', 'Нагатинская, 2', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, 0, NULL),
@@ -521,12 +521,12 @@ if (isset($_POST["calculate"])) {
                 $coords_array = explode(",", $coords);
                 mysqli_query($link, "UPDATE `$mysql_tablename` SET latLng = '" . mysqli_real_escape_string($link, $coords) . "' WHERE orderNumber = {$row['orderNumber']}") or die("Не удалось занести в таблицу координаты");
                 $xml3     = simplexml_load_file('http://geocode-maps.yandex.ru/1.x/?geocode=' . urlencode($coords) . '&kind=district');
-                $admin_area = str_replace(', Москва, Россия', '', $xml3->GeoObjectCollection->featureMember->GeoObject->description);
+                $admin_area = str_replace(', Москва, Россия', '', $xml3->GeoObjectCollection->featureMember->GeoObject->metaDataProperty->GeocoderMetaData->Address->Component[4]->name);
                 $admin_area = str_replace('район Восточное Дегунино, ', '', $admin_area);
                 $admin_area = str_replace('район Щукино, ', '', $admin_area);
                 $admin_area = str_replace('район Арбат, ', '', $admin_area);
 
-                $district = str_replace('район', '', $xml3->GeoObjectCollection->featureMember->GeoObject->name);
+                $district = str_replace('район', '', $xml3->GeoObjectCollection->featureMember->GeoObject->metaDataProperty->GeocoderMetaData->Address->Component[5]->name);
                 $district = str_replace(' ', '', $district);
                 
                 switch ($admin_area) {
