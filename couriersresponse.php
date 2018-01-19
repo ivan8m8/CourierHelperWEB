@@ -5,26 +5,21 @@
 
 	mb_internal_encoding("UTF-8");
 
-	$mysql_host = ""; // адрес MySQL-сервера
-	$mysql_user = ""; // имя пользователя для аторизации на Вашем MySQL-сервере
-	$mysql_password = ""; // пароль для пользовтеля, указанного выше
-	$mysql_dbname = ""; // название Вашей MySQL-базы данных, в которой хранится таблица с информацией о доставках
-	$mysql_tablename = ""; // название MySQL-таблицы, в кторой харнится информация о доставках
+    require_once 'config/config.php';
 
 	$orderNumber = $_GET["orderNumber"];
     $deliveryDate = $_GET["deliveryDate"];
-    $secureCode = $_GET["secure7Code"];
 
-    /**
-    * Здесь переменная secureCode должна равняться переменной в файле Android-приложения
-    */
-    if ($secureCode == "секретныйКод") {
-    	$link = mysql_connect($mysql_host, $mysql_user, $mysql_password) 
-        or die('Не удалось соединиться: ' . mysql_error());
-    	mysql_select_db($mysql_dbname) or die('Не удалось выбрать базу данных: ' . mysql_error());
-    	mysql_set_charset('utf8');
-    	$result = mysql_query("UPDATE $mysql_tablename SET deliveryStatus = '1', deliveryDate = '".mysql_real_escape_string($deliveryDate)."' WHERE orderNumber = '".mysql_real_escape_string($orderNumber)."';") or die('Не удалось отметить, что курьер выполнил доставку: ' . mysql_error());
-    } // else нужно записывать и банить IP
+    $link = mysqli_connect($mysql_host, $mysql_user, $mysql_password, $mysql_dbname);
+    if (!$link) {
+        echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
+        echo "Код ошибки errno: " . mysqli_connect_errno() . PHP_EOL;
+        echo "Текст ошибки error: " . mysqli_connect_error() . PHP_EOL;
+        exit;
+    }
+    ysqli_set_charset($link, "utf8");
+    $result = mysqli_query($link, "UPDATE $mysql_tablename SET deliveryStatus = '1', deliveryDate = '".mysqli_real_escape_string($link, $deliveryDate)."' WHERE orderNumber = '".mysqli_real_escape_string($link, $orderNumber)."';") or die('Не удалось отметить, что курьер выполнил доставку: ' . mysqli_error($link));
+    mysqli_free_result($result);
 
-	mysql_close($link);
+	mysqli_close($link);
 ?>
