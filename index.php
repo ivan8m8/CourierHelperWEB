@@ -526,7 +526,9 @@ if (isset($_POST["calculate"])) {
                 $admin_area = str_replace('район Щукино, ', '', $admin_area);
                 $admin_area = str_replace('район Арбат, ', '', $admin_area);
 
-                $district = str_replace('район ', '', $xml3->GeoObjectCollection->featureMember->GeoObject->metaDataProperty->GeocoderMetaData->Address->Component[5]->name);
+                $district = str_replace('район', '', $xml3->GeoObjectCollection->featureMember->GeoObject->metaDataProperty->GeocoderMetaData->Address->Component[5]->name);
+
+                //$district = str_replace('район ', '', $xml3->GeoObjectCollection->featureMember->GeoObject->metaDataProperty->GeocoderMetaData->Address->Component[5]->name);
                 
                 switch ($admin_area) {
                     case 'Центральный административный округ':
