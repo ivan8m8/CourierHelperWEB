@@ -2,13 +2,12 @@
 
 mb_internal_encoding("UTF-8");
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 require 'Classes/PHPExcel/IOFactory.php';
 
 require_once 'config/config.php';
-
-echo "<br />";
-echo $host;
-echo "<br />";
 
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["excelFileToUpload"]["name"]);
@@ -37,6 +36,7 @@ if ($uploadOk == 0) {
         echo '<br />';
 
         $inputfilename = $target_dir . basename($_FILES["excelFileToUpload"]["name"]);
+
         $exceldata = array();
 
         $conn = mysqli_connect($mysql_host, $mysql_user, $mysql_password, $mysql_dbname);
