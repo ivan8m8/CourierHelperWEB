@@ -64,13 +64,16 @@ if ($uploadOk == 0) {
             //  Read a row of data into an array
             $rowData = $sheet->rangeToArray('A' . $row . ':' . $highestColumn . $row, NULL, TRUE, FALSE);
 
-            if ($rowData[0][7] == '') {
-                $sql = "INSERT INTO deliveries (orderNumber, deliveryAddress, deliveryTimeLimit, clientName, clientPhoneNumber, clientComment, itemName, itemPrice)
-                VALUES ('".$rowData[0][0]."', '".$rowData[0][1]."', '".$rowData[0][2]."', '".$rowData[0][3]."', '".$rowData[0][4]."', '".$rowData[0][5]."', '".$rowData[0][6]."', NULL)";
-            } else {
-                $sql = "INSERT INTO deliveries (orderNumber, deliveryAddress, deliveryTimeLimit, clientName, clientPhoneNumber, clientComment, itemName, itemPrice)
+            // if ($rowData[0][7] == '') {
+            //     $sql = "INSERT INTO deliveries (orderNumber, deliveryAddress, deliveryTimeLimit, clientName, clientPhoneNumber, clientComment, itemName, itemPrice)
+            //     VALUES ('".$rowData[0][0]."', '".$rowData[0][1]."', '".$rowData[0][2]."', '".$rowData[0][3]."', '".$rowData[0][4]."', '".$rowData[0][5]."', '".$rowData[0][6]."', NULL)";
+            // } else {
+            //     $sql = "INSERT INTO deliveries (orderNumber, deliveryAddress, deliveryTimeLimit, clientName, clientPhoneNumber, clientComment, itemName, itemPrice)
+            // VALUES ('".$rowData[0][0]."', '".$rowData[0][1]."', '".$rowData[0][2]."', '".$rowData[0][3]."', '".$rowData[0][4]."', '".$rowData[0][5]."', '".$rowData[0][6]."', '".$rowData[0][7]."')";
+            // }
+
+            $sql = "INSERT INTO deliveries (orderNumber, deliveryAddress, deliveryTimeLimit, clientName, clientPhoneNumber, clientComment, itemName, itemPrice)
             VALUES ('".$rowData[0][0]."', '".$rowData[0][1]."', '".$rowData[0][2]."', '".$rowData[0][3]."', '".$rowData[0][4]."', '".$rowData[0][5]."', '".$rowData[0][6]."', '".$rowData[0][7]."')";
-            }
 
             echo "<br />";
             echo "Был выполнен следующий SQL-запрос: <br />";
