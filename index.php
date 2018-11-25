@@ -620,7 +620,7 @@ if (isset($_POST["sort_by_admin_areas"])) {
      * ЦАО
      *******/
     
-    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'ЦАО' ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
+    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'ЦАО' AND deliveryStatus = 0 ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
     $result = mysqli_query($link, $query) or die('Запрос не удался: ' . mysqli_error($link));
     $query2 = "SELECT * FROM $mysql_courierstablename" or die('Не удалось загрузить курьеров' . mysqli_error($link));
     
@@ -657,7 +657,7 @@ if (isset($_POST["sort_by_admin_areas"])) {
      * ЗАО
      ******/
     
-    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'ЗАО' ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
+    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'ЗАО' AND deliveryStatus = 0 ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
     $result = mysqli_query($link, $query) or die('Запрос не удался: ' . mysqli_error($link));
     $query2 = "SELECT * FROM $mysql_courierstablename" or die('Не удалось загрузить курьеров' . mysqli_error($link));
     
@@ -694,7 +694,7 @@ if (isset($_POST["sort_by_admin_areas"])) {
      * CЗАО
      *******/
     
-    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'СЗАО' ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
+    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'СЗАО' AND deliveryStatus = 0 ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
     $result = mysqli_query($link, $query) or die('Запрос не удался: ' . mysqli_error($link));
     $query2 = "SELECT * FROM $mysql_courierstablename" or die('Не удалось загрузить курьеров' . mysqli_error($link));
     
@@ -731,7 +731,7 @@ if (isset($_POST["sort_by_admin_areas"])) {
      * САО
      ******/
     
-    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'САО' ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
+    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'САО' AND deliveryStatus = 0 ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
     $result = mysqli_query($link, $query) or die('Запрос не удался: ' . mysqli_error($link));
     $query2 = "SELECT * FROM $mysql_courierstablename" or die('Не удалось загрузить курьеров' . mysqli_error($link));
     
@@ -768,7 +768,7 @@ if (isset($_POST["sort_by_admin_areas"])) {
      * СВАО
      ******/
     
-    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'СВАО' ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit = NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
+    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'СВАО' AND deliveryStatus = 0 ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit = NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
     $result = mysqli_query($link, $query) or die('Запрос не удался: ' . mysqli_error($link));
     $query2 = "SELECT * FROM $mysql_courierstablename" or die('Не удалось загрузить курьеров' . mysqli_error($link));
     
@@ -805,7 +805,7 @@ if (isset($_POST["sort_by_admin_areas"])) {
      * ВАО
      ******/
     
-    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'ВАО' ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
+    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'ВАО' AND deliveryStatus = 0 ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
     $result = mysqli_query($link, $query) or die('Запрос не удался: ' . mysqli_error($link));
     $query2 = "SELECT * FROM $mysql_courierstablename" or die('Не удалось загрузить курьеров' . mysqli_error($link));
     
@@ -842,7 +842,7 @@ if (isset($_POST["sort_by_admin_areas"])) {
      * ЮВАО
      ******/
     
-    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'ЮВАО' ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit = NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
+    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'ЮВАО' AND deliveryStatus = 0 ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit = NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
     $result = mysqli_query($link, $query) or die('Запрос не удался: ' . mysqli_error($link));
     $query2 = "SELECT * FROM $mysql_courierstablename" or die('Не удалось загрузить курьеров' . mysqli_error($link));
     
@@ -879,7 +879,7 @@ if (isset($_POST["sort_by_admin_areas"])) {
      * ЮАО
      ******/
     
-    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'ЮАО' ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
+    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'ЮАО' AND deliveryStatus = 0 ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
     $result = mysqli_query($link, $query) or die('Запрос не удался: ' . mysqli_error($link));
     $query2 = "SELECT * FROM $mysql_courierstablename" or die('Не удалось загрузить курьеров' . mysqli_error($link));
     
@@ -916,7 +916,7 @@ if (isset($_POST["sort_by_admin_areas"])) {
      * ЮЗАО
      ******/
     
-    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'ЮЗАО' ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
+    $query = "SELECT * FROM $mysql_tablename WHERE adminArea = 'ЮЗАО' AND deliveryStatus = 0 ORDER BY district, CASE WHEN deliveryTimeLimit = '' OR deliveryTimeLimit IS NULL THEN 2 ELSE 1 END, deliveryTimeLimit";
     $result = mysqli_query($link, $query) or die('Запрос не удался: ' . mysqli_error($link));
     $query2 = "SELECT * FROM $mysql_courierstablename" or die('Не удалось загрузить курьеров' . mysqli_error($link));
     
