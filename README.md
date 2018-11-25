@@ -12,7 +12,7 @@
    5. CourierHelper отправляет эти доставки курьерам на Android-устройства
 
 **Как выглядят отсортированные доставки (3-ий шаг):**
-![отсортированные доставки](https://test.courierhelper.ru/img/sortedDeliveries.png)
+![отсортированные доставки](https://test.courierhelper.is88.ru/img/sortedDeliveries.png)
 
 ### Возможности мобильного приложения для Android
    * звонок клиенту в один клик
