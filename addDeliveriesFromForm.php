@@ -51,5 +51,5 @@
     } else {
         echo "<b>Ошибка:</b> " . $sql . "<br>" . mysqli_error($conn);
     }
-	echo '<br /><a href ="https://test.courierhelper.ru/">Вернуться</a>';
+	echo '<br /><a href ="/">Вернуться</a>';
 ?>
