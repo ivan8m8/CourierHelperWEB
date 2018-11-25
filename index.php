@@ -600,7 +600,7 @@ if (isset($_POST["calculate"])) {
     } else {
         echo '<div>Таблица с адресами пуста или заполнена полностью.</div>';
     }
-    echo "<script language='JavaScript' type='text/javascript'>window.location.replace('http://test.courierhelper.ru/')</script>";
+    echo "<script language='JavaScript' type='text/javascript'>window.location.replace('http://test.courierhelper.is88.ru/')</script>";
 }
 
 if (isset($_POST["sort_by_admin_areas"])) {
@@ -975,7 +975,7 @@ if (isset($_POST["send_to_couriers"])) {
 
     <!-- Site footer -->
       <footer class="footer">
-        <p>CourierHelper.ru by Ivan Makachka &copy; 2017</p>
+        <p>CourierHelper.is88.ru by Ivan Makachka &copy; 2017</p>
         
       </footer>
 
